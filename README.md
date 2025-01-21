@@ -5,18 +5,28 @@ Please upgrade your Node.js version.
 
 # Commands
 
-`console npm install`
+```
+npm install
+```
 
 # Prisma Setup
 
 We are using Prisma ORM from scratch using a local SQLite database file.
-`console npm install typescript tsx @types/node --save-dev`
-`console npx tsc --init`
-`console npm install prisma --save-dev`
-`console npx prisma init --datasource-provider sqlite`
-Since the model already exists in schema.prisma we can now tun
 
-`console npx prisma migrate dev --name init`
+```
+npm install typescript tsx @types/node --save-dev
+npx tsc --init
+npm install prisma --save-dev
+npx prisma init --datasource-provider sqlite
+
+```
+
+Since the model already exists in schema.prisma we can now run
+
+```
+npx prisma migrate dev --name init
+
+```
 
 This command did three things:
 
@@ -26,4 +36,4 @@ It ran prisma generate under the hood (which installed the @prisma/client packag
 
 # Now Run
 
-`console npm start`
+`npm start`
