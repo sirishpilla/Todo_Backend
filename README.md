@@ -21,6 +21,20 @@ npx prisma init --datasource-provider sqlite
 
 ```
 
+Please copy this model to /prisma/schema.prisma
+
+```
+model Task {
+  id        Int      @id @default(autoincrement())
+  title     String
+  color     String
+  completed Boolean  @default(false)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+```
+
 Since the model already exists in schema.prisma we can now run
 
 ```
